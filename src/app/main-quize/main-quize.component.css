@@ -1,0 +1,17 @@
+p {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    direction: rtl;
+}
+
+.ans {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: large;
+}
+
+.message-class {
+    font-size: large;
+}

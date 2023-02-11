@@ -1,0 +1,20 @@
+<div style="text-align:center">
+    <h1>
+        חידון הכפל
+    </h1>
+    <h2 *ngIf="!question">לחץ על התחל על מנת להתחיל</h2>
+    <h2 *ngIf="question">{{question.left}} {{operation}} {{question.right}} = ?</h2>
+    <br><br>
+    <div *ngIf="answers"  >
+        <div class="ans" [style.color]="getColor(i)" *ngFor="let answer of answers; index as i" 
+        (click)="checkAnswer(answer)">
+            {{answer}}
+    </div>
+    </div>
+    <br><br>
+    <div class="message-class" *ngIf="message">{{message}}</div>
+    <br><br>
+    <button (click)="startQuiz()" *ngIf="enableButton" class="btn btn-primary"> {{ buttonStr }} </button>
+    <br><br>
+    <p>תשובות נכונות : {{rightCounter}}</p>
+</div>
